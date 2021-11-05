@@ -1,5 +1,5 @@
 {
-  "sourceType": "SQLITE",
+  "sourceType": "DRILL",
   "metadataRefresh": {
     "datasetDiscovery": true
   },
@@ -14,9 +14,39 @@
             "layout": "row",
             "elements": [
               {
-                "propName": "config.database",
+                "propName": "config.direct",
+                "validate": {
+                  "isRequired": false
+                }
+              },
+              {
+                "propName": "config.host",
                 "validate": {
                   "isRequired": true
+                }
+              },
+              {
+                "propName": "config.port",
+                "validate": {
+                  "isRequired": true
+                }
+              },
+              {
+                "propName": "config.directory",
+                "validate": {
+                  "isRequired": false
+                }
+              },
+              {
+                "propName": "config.clusterId",
+                "validate": {
+                  "isRequired": false
+                }
+              },
+              {
+                "propName": "config.schema",
+                "validate": {
+                  "isRequired": false
                 }
               }
             ]
@@ -36,9 +66,6 @@
                   "position": "bottom",
                   "text": "Set to 0 to have Dremio automatically decide."
                 }
-              },
-              {
-                "propName": "config.enableExternalQuery"
               }
             ]
           }

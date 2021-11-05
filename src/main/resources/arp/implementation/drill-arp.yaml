@@ -16,13 +16,13 @@
 
 metadata:
   # Manually Configured Metadata Section.
-  name: SQLITE
-  apiname: sqlite
+  name: DRILL
+  apiname: drill
   spec_version: '1'
 
 syntax:
   # Manually Configured Syntax Section.
-  identifier_quote: '"'
+  identifier_quote: '`'
   identifier_length_limit: 128
   allows_boolean_literal: false
   map_boolean_literal_to_bit: false
