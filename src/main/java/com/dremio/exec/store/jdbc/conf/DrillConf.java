@@ -78,6 +78,15 @@ public class DrillConf extends AbstractArpConf<DrillConf> {
   @NotMetadataImpacting
   public int fetchSize = 200;
 
+  /*@Tag(8)
+  @DisplayMetadata(label = "Username")
+  public String username;
+
+  @Tag(9)
+  @Secret
+  @DisplayMetadata(label = "Password")
+  public String password;*/
+
   @VisibleForTesting
   public String toJdbcConnectionString() {
     final String host = checkNotNull(this.host, "Missing host.");
@@ -88,14 +97,14 @@ public class DrillConf extends AbstractArpConf<DrillConf> {
       builder.append(String.format(":drillbit=%s:%s", host, port));
     } else {
       builder.append(String.format(":zk=%s:%s", host, port));
-    }
 
-    if (directory != null && directory.length() != 0) {
-      builder.append(String.format("/%s", directory));
-    }
+      if (directory != null && directory.length() != 0) {
+        builder.append(String.format("/%s", directory));
+      }
 
-    if (clusterId != null && clusterId.length() != 0) {
-      builder.append(String.format("/%s", clusterId));
+      if (clusterId != null && clusterId.length() != 0) {
+        builder.append(String.format("/%s", clusterId));
+      }
     }
 
     if (schema != null && schema.length() != 0) {
