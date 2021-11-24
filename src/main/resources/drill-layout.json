@@ -42,12 +42,6 @@
                 "validate": {
                   "isRequired": false
                 }
-              },
-              {
-                "propName": "config.schema",
-                "validate": {
-                  "isRequired": false
-                }
               }
             ]
           }

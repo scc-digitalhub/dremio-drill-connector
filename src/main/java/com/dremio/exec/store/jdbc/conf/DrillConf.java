@@ -70,19 +70,15 @@ public class DrillConf extends AbstractArpConf<DrillConf> {
   public String clusterId = "drillbits1";
 
   @Tag(6)
-  @DisplayMetadata(label = "schema")
-  public String schema;
-
-  @Tag(7)
   @DisplayMetadata(label = "Record fetch size")
   @NotMetadataImpacting
   public int fetchSize = 200;
 
-  /*@Tag(8)
+  /*@Tag(7)
   @DisplayMetadata(label = "Username")
   public String username;
 
-  @Tag(9)
+  @Tag(8)
   @Secret
   @DisplayMetadata(label = "Password")
   public String password;*/
@@ -105,10 +101,6 @@ public class DrillConf extends AbstractArpConf<DrillConf> {
       if (clusterId != null && clusterId.length() != 0) {
         builder.append(String.format("/%s", clusterId));
       }
-    }
-
-    if (schema != null && schema.length() != 0) {
-      builder.append(String.format(";schema=%s", schema));
     }
 
     LOGGER.info("Drill connection string is: {}", builder.toString());
