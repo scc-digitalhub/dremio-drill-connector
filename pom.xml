@@ -21,12 +21,12 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.dremio.plugin</groupId>
-  <version>17.0.0-202107060524010627-31b5222b</version>
+  <version>20.1.0-202202061055110045-36733c65</version>
   <artifactId>dremio-drill-plugin</artifactId>
   <name>Dremio Drill Community Connector</name>
 
   <properties>
-    <version.dremio>17.0.0-202107060524010627-31b5222b</version.dremio>
+    <version.dremio>20.1.0-202202061055110045-36733c65</version.dremio>
   </properties>
 
   <dependencies>
