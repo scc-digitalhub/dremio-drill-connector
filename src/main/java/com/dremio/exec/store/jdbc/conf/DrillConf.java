@@ -39,7 +39,7 @@ import org.slf4j.LoggerFactory;
 /**
  * Configuration for Drill sources.
  */
-@SourceType(value = "DRILL", label = "Drill", uiConfig = "drill-layout.json")
+@SourceType(value = "DRILL", label = "Drill", uiConfig = "drill-layout.json", externalQuerySupported = true)
 public class DrillConf extends AbstractArpConf<DrillConf> {
   private static final String ARP_FILENAME = "arp/implementation/drill-arp.yaml";
   private static final ArpDialect ARP_DIALECT =
